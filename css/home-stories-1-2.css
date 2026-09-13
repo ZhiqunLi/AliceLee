@@ -1,0 +1,107 @@
+/* Story 1: rotating hero photography with a readable fallback. */
+.hero-section {
+  --hero-overlay-top: rgba(248, 250, 252, 0.58);
+  --hero-overlay-bottom: rgba(241, 245, 249, 0.68);
+  --hero-text-strong: #0f172a;
+  --hero-text-accent: #172554;
+  --hero-text-secondary: #1e293b;
+  background-image:
+    linear-gradient(var(--hero-overlay-top), var(--hero-overlay-bottom)),
+    url("/images/background_picture1.JPEG") !important;
+  background-position: center;
+  background-size: cover;
+  isolation: isolate;
+}
+
+.site-english-name {
+  display: inline-block;
+  margin-left: 0.45rem;
+  color: var(--color-text-secondary);
+  font-size: 0.58em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  vertical-align: 0.12em;
+}
+
+.dark .site-english-name {
+  color: var(--color-text-muted);
+}
+
+.hero-background-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-background-slide {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.hero-background-slide::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(var(--hero-overlay-top), var(--hero-overlay-bottom));
+}
+
+.hero-background-slide.is-active {
+  opacity: 1;
+}
+
+/* Keep the welcome screen free of generated line and wireframe decorations. */
+#home > .morphing-shapes,
+#home .diagonal-line,
+#home .spline-curve {
+  display: none !important;
+}
+
+/* Keep foreground copy readable against the lighter photography treatment. */
+#home .hero-text-accent {
+  color: var(--hero-text-secondary);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+}
+
+#home [data-animation="greeting"] .hero-text-accent {
+  color: var(--hero-text-accent);
+  font-weight: 700;
+}
+
+#home .hero-name {
+  background: linear-gradient(135deg, var(--hero-text-strong), var(--hero-text-accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.65));
+}
+
+#home [data-animation="description"] {
+  color: var(--hero-text-strong);
+  background: rgba(255, 255, 255, 0.72) !important;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.14);
+  text-shadow: none;
+}
+
+#home [data-animation="buttons"] .hero-button {
+  color: var(--hero-text-accent) !important;
+  background: rgba(255, 255, 255, 0.94) !important;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.18);
+}
+
+/* Story 2: keep the longer approved introduction comfortable to read. */
+#home [data-animation="description"] {
+  font-size: clamp(1rem, 1.4vw, 1.125rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-background-slide {
+    transition: none;
+  }
+}

@@ -1,0 +1,16 @@
+/* Story 9: polished long-form biography alignment. */
+#about .about-text-element > div > p:first-child,
+#about #aboutModal .space-y-6 > p:first-child {
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+@supports (text-wrap: pretty) {
+  #about .about-text-element > div > p:first-child,
+  #about #aboutModal .space-y-6 > p:first-child {
+    text-wrap: pretty;
+  }
+}

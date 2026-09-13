@@ -1,0 +1,77 @@
+/* Story 3: reserve a stable line for the four rotating research phrases. */
+#home h2[data-animation="tagline"] .typewriter {
+  display: block;
+  min-height: 1.4em;
+}
+
+/* Stories 4–6: accessible LinkedIn, GitHub and Microsoft Bookings links. */
+#home .hero-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.82) !important;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.14);
+}
+
+#home .hero-social-links > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  margin-left: 0 !important;
+  color: var(--hero-text-accent) !important;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(23, 37, 84, 0.15);
+  border-radius: 0.75rem;
+  transition: transform 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+
+#home .hero-social-links > a:hover {
+  color: var(--hero-text-strong) !important;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.16);
+}
+
+#home .hero-social-links > a:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+
+#home .hero-bookings-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.65rem;
+}
+
+#home .hero-bookings-icon .fa-calendar-check {
+  position: absolute;
+  right: -0.28rem;
+  bottom: -0.18rem;
+  padding: 0.12rem;
+  color: #ffffff;
+  font-size: 0.72rem;
+  background: var(--hero-text-accent);
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+}
+
+@media (min-width: 1024px) {
+  #home .hero-social-links {
+    justify-content: flex-end;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #home .hero-social-links > a {
+    transition: none;
+  }
+}

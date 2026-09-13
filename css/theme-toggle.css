@@ -1,0 +1,53 @@
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: 0 0 auto;
+  color: var(--color-text-primary);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 9999px;
+  box-shadow: 0 4px 12px var(--color-shadow-light);
+  cursor: pointer;
+  transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+.theme-toggle:hover {
+  color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid var(--color-second);
+  outline-offset: 3px;
+}
+
+.theme-toggle .theme-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.theme-toggle .theme-icon-sun,
+.dark .theme-toggle .theme-icon-moon {
+  display: none;
+}
+
+.dark .theme-toggle .theme-icon-sun {
+  display: inline-block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle {
+    transition: none;
+  }
+}

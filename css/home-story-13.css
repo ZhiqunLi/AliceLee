@@ -1,0 +1,102 @@
+#contact .contact-card {
+  height: 100%;
+}
+
+#contact .story-13-contact-intro {
+  line-height: 1.7;
+}
+
+#contact .story-13-contact-list {
+  display: grid;
+  gap: 1rem;
+}
+
+#contact .story-13-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  background: var(--color-bg-secondary);
+}
+
+#contact .story-13-contact-icon {
+  display: inline-flex;
+  flex: 0 0 2.75rem;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 9999px;
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-second));
+  box-shadow: 0 4px 12px var(--color-shadow-light);
+}
+
+#contact .story-13-contact-content {
+  min-width: 0;
+  padding-top: 0.1rem;
+}
+
+#contact .story-13-contact-label {
+  margin-bottom: 0.2rem;
+  color: var(--color-text-primary);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+#contact .story-13-contact-value,
+#contact .story-13-contact-value a {
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+#contact .story-13-contact-value a:hover,
+#contact .story-13-contact-value a:focus-visible {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+#contact .story-13-contact-or {
+  display: inline-block;
+  margin: 0 0.35rem;
+}
+
+@media (min-width: 1024px) {
+  #contact .story-13-message-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #contact .story-13-message-card #contact-form {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  #contact .story-13-message-field {
+    display: flex;
+    flex: 1;
+    min-height: 12rem;
+    flex-direction: column;
+  }
+
+  #contact .story-13-message-field textarea {
+    flex: 1;
+    min-height: 12rem;
+    resize: vertical;
+  }
+}
+
+@media (max-width: 639px) {
+  #contact .story-13-contact-item {
+    padding: 0.85rem;
+  }
+
+  #contact .story-13-contact-or {
+    display: block;
+    margin: 0.15rem 0;
+  }
+}
