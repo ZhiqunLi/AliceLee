@@ -5,9 +5,9 @@
     "Welcome! I am a 2025 Fall Economic PhD Student at Ohio State University. I’m interested in how intimate relationships are formed, formalized, dissolved, and re-formed under preferences, information, institutions, and household investments?";
 
   var backgrounds = [
-    { url: "/images/background_picture1.JPEG", position: "60% center" },
-    { url: "/images/background_picture2.JPEG", position: "50% center" },
-    { url: "/images/background_picture3.JPEG", position: "52% center" }
+    { url: "/AliceLee/images/background_picture1.JPEG", position: "60% center" },
+    { url: "/AliceLee/images/background_picture2.JPEG", position: "50% center" },
+    { url: "/AliceLee/images/background_picture3.JPEG", position: "52% center" }
   ];
 
   function initializeApprovedStories() {

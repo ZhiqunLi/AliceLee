@@ -7,7 +7,7 @@
   --hero-text-secondary: #1e293b;
   background-image:
     linear-gradient(var(--hero-overlay-top), var(--hero-overlay-bottom)),
-    url("/images/background_picture1.JPEG") !important;
+    url("/AliceLee/images/background_picture1.JPEG") !important;
   background-position: center;
   background-size: cover;
   isolation: isolate;
