@@ -7,7 +7,7 @@
   --hero-text-secondary: #1e293b;
   background-image:
     linear-gradient(var(--hero-overlay-top), var(--hero-overlay-bottom)),
-    url("/AliceLee/images/background_picture1.JPEG") !important;
+    url("/AliceLee/images/background_picture1.JPEG?v=3") !important;
   background-position: center;
   background-size: cover;
   isolation: isolate;
@@ -41,6 +41,8 @@
   background-position: center;
   background-size: cover;
   opacity: 0;
+  transform: scale(var(--hero-background-scale, 1));
+  transform-origin: right center;
   transition: opacity 1.2s ease-in-out;
 }
 

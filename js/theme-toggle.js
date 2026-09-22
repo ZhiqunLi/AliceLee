@@ -59,19 +59,16 @@
   }
 
   function initializeThemeToggle() {
+    // Light mode is the default for first-time visitors. A saved manual
+    // preference still takes priority, so dark mode remains fully available.
+    setTheme(storedPreference() === "true", false);
+
     document.querySelectorAll('nav [data-animation="social"]').forEach(function (container) {
       if (!container.querySelector(".theme-toggle")) {
         container.appendChild(createToggle());
       }
     });
     updateButtons();
-
-    var preferenceQuery = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
-    if (storedPreference() === null && preferenceQuery && preferenceQuery.addEventListener) {
-      preferenceQuery.addEventListener("change", function (event) {
-        setTheme(event.matches, false);
-      });
-    }
   }
 
   if (document.readyState === "loading") {

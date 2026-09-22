@@ -5,9 +5,9 @@
     "Welcome! I am a 2025 Fall Economic PhD Student at Ohio State University. I’m interested in how intimate relationships are formed, formalized, dissolved, and re-formed under preferences, information, institutions, and household investments?";
 
   var backgrounds = [
-    { url: "/AliceLee/images/background_picture1.JPEG", position: "60% center" },
-    { url: "/AliceLee/images/background_picture2.JPEG", position: "50% center" },
-    { url: "/AliceLee/images/background_picture3.JPEG", position: "52% center" }
+    { url: "/AliceLee/images/background_picture1.JPEG?v=3", position: "right center", scale: "1.55" },
+    { url: "/AliceLee/images/background_picture2.JPEG?v=3", position: "right center", scale: "1.35" },
+    { url: "/AliceLee/images/background_picture3.JPEG?v=3", position: "right center", scale: "1.35" }
   ];
 
   function initializeApprovedStories() {
@@ -29,6 +29,7 @@
       slide.className = "hero-background-slide" + (index === 0 ? " is-active" : "");
       slide.style.backgroundImage = 'url("' + background.url + '")';
       slide.style.backgroundPosition = background.position;
+      slide.style.setProperty("--hero-background-scale", background.scale);
       slide.dataset.backgroundIndex = String(index + 1);
       slideContainer.appendChild(slide);
       return slide;
