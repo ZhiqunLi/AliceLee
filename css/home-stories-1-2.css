@@ -1,15 +1,16 @@
 /* Story 1: rotating hero photography with a readable fallback. */
 .hero-section {
-  --hero-overlay-top: rgba(248, 250, 252, 0.58);
-  --hero-overlay-bottom: rgba(241, 245, 249, 0.68);
+  --hero-overlay-top: rgba(248, 250, 252, 0.4);
+  --hero-overlay-bottom: rgba(241, 245, 249, 0.4);
   --hero-text-strong: #0f172a;
   --hero-text-accent: #172554;
   --hero-text-secondary: #1e293b;
   background-image:
     linear-gradient(var(--hero-overlay-top), var(--hero-overlay-bottom)),
-    url("/AliceLee/images/background_picture1.JPEG?v=3") !important;
+    url("/AliceLee/images/background_picture1.JPEG?v=4") !important;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   isolation: isolate;
 }
 
@@ -40,9 +41,8 @@
   inset: 0;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   opacity: 0;
-  transform: scale(var(--hero-background-scale, 1));
-  transform-origin: right center;
   transition: opacity 1.2s ease-in-out;
 }
 
@@ -67,7 +67,9 @@
 /* Keep foreground copy readable against the lighter photography treatment. */
 #home .hero-text-accent {
   color: var(--hero-text-secondary);
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  text-shadow:
+    0 1px 2px rgba(255, 255, 255, 0.95),
+    0 0 12px rgba(255, 255, 255, 0.8);
 }
 
 #home [data-animation="greeting"] .hero-text-accent {
@@ -80,7 +82,9 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.65));
+  filter:
+    drop-shadow(0 1px 1px rgba(255, 255, 255, 0.95))
+    drop-shadow(0 0 8px rgba(255, 255, 255, 0.72));
 }
 
 #home [data-animation="description"] {
